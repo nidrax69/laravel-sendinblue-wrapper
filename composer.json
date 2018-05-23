@@ -1,9 +1,13 @@
 {
-    "name": "vansteen/sendinblue",
+    "name": "nidrax69/sendinblue",
     "description": "A Laravel 5 (and Laravel 4) wrapper for the SendInBlue API PHP class (as provided by SendInBlue)",
     "keywords": ["laravel", "sendinblue"],
     "license": "MIT",
     "authors": [
+        {
+            "name": "Vincent FLORIOT",
+            "email": "v.floriot@hotmail.fr"
+        },
         {
             "name": "Thomas Van Steenwinckel",
             "email": "tom@vansteen.me"
@@ -12,11 +16,11 @@
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "4.*|5.*",
-        "mailin-api/mailin-api-php": "dev-master"
+        "mailin-api/mailin-api-php": "*"
     },
     "autoload": {
         "psr-0": {
-            "Vansteen\\Sendinblue\\": "src/"
+            "Nidrax69\\Sendinblue\\": "src/"
         }
     },
     "minimum-stability": "stable"

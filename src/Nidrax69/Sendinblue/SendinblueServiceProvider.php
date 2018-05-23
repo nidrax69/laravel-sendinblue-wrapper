@@ -1,4 +1,4 @@
-<?php namespace Vansteen\Sendinblue;
+<?php namespace Nidrax69\Sendinblue;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Config;
@@ -25,7 +25,7 @@ class SendinblueServiceProvider extends ServiceProvider {
 
 		if ($version[0] == 4)
 		{
-			$this->package('vansteen/sendinblue');
+			$this->package('nidrax69/sendinblue');
 		}
 		elseif ($version[0] == 5)
 		{

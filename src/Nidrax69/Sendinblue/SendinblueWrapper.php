@@ -1,4 +1,4 @@
-<?php namespace Vansteen\Sendinblue;
+<?php namespace Nidrax69\Sendinblue;
 
 use Sendinblue\Mailin;
 

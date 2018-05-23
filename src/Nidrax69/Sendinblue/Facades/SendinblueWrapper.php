@@ -1,4 +1,4 @@
-<?php namespace Vansteen\Sendinblue\Facades;
+<?php namespace Nidrax69\Sendinblue\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
