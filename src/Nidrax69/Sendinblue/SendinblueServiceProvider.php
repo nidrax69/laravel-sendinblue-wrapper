@@ -1,10 +1,10 @@
 <?php namespace Nidrax69\Sendinblue;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Illuminate\Support\Facades\Config;
 use Sendinblue\Mailin;
 
-class SendinblueServiceProvider extends ServiceProvider {
+class SendinblueServiceProvider extends BaseServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -42,20 +42,16 @@ class SendinblueServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app->singleton('sendinblue_wrapper', function() {
-
-			$app = app();
+		$this->app->bind('sendinblue_wrapper', function($app) {
 			$version = $app::VERSION;
 
 			if ($version[0] == 4)
 			{
-				$ml = new Mailin('https://api.sendinblue.com/v2.0', Config::get('sendinblue::apikey'));
-				return new SendinblueWrapper($ml);
+				return new SendinblueWrapper();
 			}
 			elseif ($version[0] == 5)
 			{
-				$ml = new Mailin('https://api.sendinblue.com/v2.0', Config::get('sendinblue.apikey'));
-				return new SendinblueWrapper($ml);
+				return new SendinblueWrapper();
 			}
 
 		});
