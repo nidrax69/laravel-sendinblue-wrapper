@@ -12,7 +12,7 @@ In order to install, add the following to your `composer.json` file within the `
 ```js
 "require": {
     …
-    "vansteen/sendinblue": "dev-master"
+    "nidrax69/sendinblue": "0.0.2"
     …
 }
 ```
@@ -23,7 +23,7 @@ Add the following to the `providers` array:
 ```php
 'providers' => array(
     …
-    'Vansteen\Sendinblue\SendinblueServiceProvider',
+    'Nidrax69\Sendinblue\SendinblueServiceProvider',
     …
 ),
 ```
@@ -33,7 +33,7 @@ Furthermore, add the following the the `aliases` array:
 ```php
 'aliases' => array(
     …
-    'SendinblueWrapper' => 'Vansteen\Sendinblue\Facades\SendinBlueWrapper',
+    'SendinblueWrapper' => 'Nidrax69\Sendinblue\Facades\SendinBlueWrapper',
     …
 ),
 ```
@@ -61,8 +61,9 @@ Methods of the Sendinblue API class work as described by the Sendinblue API docs
 
 ```php
 …
-// Retrieve your account info
-$account = SendinblueWrapper::get_account();
+// send template
+$ml = new SendinblueWrapper();
+$return = $ml->send_transactional_template($data);
 …
 ```
 
