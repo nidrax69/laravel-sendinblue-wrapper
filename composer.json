@@ -1,6 +1,6 @@
 {
     "name": "nidrax69/sendinblue",
-    "description": "A Laravel 5 (and Laravel 4) wrapper for the SendInBlue API PHP class (as provided by SendInBlue)",
+    "description": "A Laravel 5/6 update wrapper for the SendInBlue API PHP class (as provided by SendInBlue)",
     "keywords": ["laravel", "sendinblue"],
     "license": "MIT",
     "authors": [
@@ -15,8 +15,8 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.*|5.*",
-        "mailin-api/mailin-api-php": "*"
+        "illuminate/support": "4.*|5.*|6.*",
+        "sendinblue/api-v3-sdk": "*"
     },
     "autoload": {
         "psr-0": {
